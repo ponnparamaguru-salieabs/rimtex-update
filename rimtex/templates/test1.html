@@ -1,0 +1,46 @@
+To make the fields evenly distributed in your modal, you can adjust the grid layout. Here’s an updated version of your modal code, ensuring that all fields take equal space in the grid:
+
+```html
+<div class="modal" id="addShiftModal">
+    <div class="modal__content">
+        <div class="flex items-center px-5 py-5 sm:py-3 border-b border-gray-200">
+            <h2 class="font-medium text-base mr-auto">Add Shift</h2>
+        </div>
+        <div class="p-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="col-span-1"> 
+                <label>Shift Number</label> 
+                <input type="text" class="input w-full border mt-2" placeholder="Shift Number"> 
+            </div>
+            <div class="col-span-1"> 
+                <label>Shift Name</label> 
+                <input type="text" class="input w-full border mt-2" placeholder="Shift Name"> 
+            </div>
+            <div class="col-span-1">
+                <label for="from-date" class="inline-block mb-2">From</label>
+                <div class="flex gap-4">
+                    <input id="from-date" type="text" data-single-mode="true" class="input border flex-1" />
+                    <input type="time" id="from-time" class="input border w-24" />
+                </div>
+            </div>
+            <div class="col-span-1">
+                <label for="to-date" class="inline-block mb-2">To</label>
+                <div class="flex gap-4">
+                    <input id="to-date" type="text" data-single-mode="true" class="input border flex-1" />
+                    <input type="time" id="to-time" class="input border w-24" />
+                </div>
+            </div>
+        </div>
+        <div class="px-5 py-3 text-right border-t border-gray-200"> 
+            <button type="button" class="button w-20 border text-gray-700 mr-1" data-dismiss="modal">Cancel</button> 
+            <button type="button" class="button w-20 bg-theme-1 text-white">Add</button> 
+        </div>
+    </div>
+</div>
+```
+
+### Changes Made:
+1. **Grid Layout:** Changed the grid to `sm:grid-cols-2` for even distribution across two columns on larger screens.
+2. **Flex Property:** Added `flex-1` to the date input fields to ensure they take up equal space.
+3. **Unique IDs:** Changed input IDs for better accessibility and to prevent duplicate IDs.
+
+This structure should give you evenly spaced fields in your modal.
