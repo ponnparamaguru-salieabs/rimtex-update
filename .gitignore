@@ -10,3 +10,4 @@ media/
 *.pyd
 .idea/
 .vscode/
+.vercel
