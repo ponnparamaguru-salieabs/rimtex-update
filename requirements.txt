@@ -5,7 +5,7 @@ dj-database-url==2.2.0
 Django==5.1.1
 gunicorn==23.0.0
 idna==3.10
-psycopg2-binary==2.9.10  # Keep this for PostgreSQL support
+psycopg2-binary==2.9.10  # PostgreSQL support
 packaging==24.1
 pillow==10.4.0
 requests==2.32.3
